@@ -1,0 +1,38 @@
+<div class="mb-4 text-success h2">
+  Sign in
+</div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <input class="form-control bg-body-secondary" placeholder="Email" formControlName="email">
+    <div class="text-danger" *ngIf="dispalyError('email')">
+      <div *ngIf="form.controls['email'].hasError('required')">
+        the Email is Required
+      </div>
+    </div>
+  </div>
+
+
+  <div class="mb-3">
+    <input class="form-control bg-body-secondary" placeholder="Password" formControlName="password">
+    <div class="text-danger" *ngIf="dispalyError('password')">
+      <div *ngIf="form.controls['password'].hasError('required')">
+        the password is Required.
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="mb-4">
+    <button class=" btn btn-success w-100 rounded-3" type="submit">
+      sign in
+    </button>
+  </div>
+  <div>
+    Don't have an account?
+    <a routerLink="/signup" class="text-success text-decoration-none fw-medium d-inline-block" >Create Account</a>
+  </div>
+</form>

@@ -1,0 +1,63 @@
+<div class="mb-4 text-success h2">
+  Sign up
+</div>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <input class="form-control bg-body-secondary" placeholder="Full Name" formControlName="fullname">
+    <div class="text-danger" *ngIf="dispalyError('fullname') && form.controls['fullname'].hasError('required')
+  ">
+      the name is Required
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <input class="form-control bg-body-secondary" placeholder="Email" formControlName="email">
+    <div class="text-danger" *ngIf="dispalyError('email')">
+      <div *ngIf="form.controls['email'].hasError('required')">
+        the Email is Required
+      </div>
+      <div *ngIf="form.controls['email'].hasError('email')">
+        the Email Most By Vaild
+      </div>
+      <div *ngIf="form.controls['email'].hasError('emailTaken')">
+        This username is already taken.
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <input class="form-control bg-body-secondary" placeholder="Password" formControlName="password">
+    <div class="text-danger" *ngIf="dispalyError('password')">
+      <div *ngIf="form.controls['password'].hasError('required')">
+        the password is Required.
+      </div>
+      <div *ngIf="form.controls['password'].hasError('pattern')">
+        One or More Special character(s).
+        <div>
+          The password must contain at least one uppercase letter and one special character(s).
+        </div>
+      </div>
+      <div *ngIf="form.controls['password'].hasError('minlength')">
+        Atleast 6 character required.
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <input class="form-control bg-body-secondary" placeholder="Confirm Password" formControlName="confirmPassword">
+    <div class="text-danger"
+      *ngIf="dispalyError('confirmPassword') && form.controls['confirmPassword'].hasError('passwordMisMatch')">
+      Password not Match
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <button class=" btn btn-success w-100 rounded-3" type="submit">
+      Register
+    </button>
+  </div>
+  <div>
+    Already have an account?
+    <a routerLink="/signin" class="text-success text-decoration-none fw-medium d-inline-block">sign in</a>
+  </div>
+</form>

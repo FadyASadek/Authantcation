@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+
+body
+{
+    font-family: "Open Sans", serif;
+}
+.toast-center {
+  top: 7% !important; /* في منتصف الشاشة رأسياً */
+  left: 50% !important; /* في منتصف الشاشة أفقياً */
+  transform: translate(-50%, -50%) !important; /* لضبط النقطة المرجعية */
+  position: fixed !important;
+  z-index: 9999 !important; /* لضمان ظهورها فوق المحتوى */
+}
