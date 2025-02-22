@@ -1,5 +1,5 @@
-Building a Secure Authentication System with Angular, ASP.NET Core API, and SQL Server
- Overview
+# Building a Secure Authentication System with Angular, ASP.NET Core API, and SQL Server
+--Overview
 I’m excited to share a project I recently developed—a secure authentication system that provides seamless Sign In and Sign Up functionality. Built with a modern tech stack, this system ensures a smooth and secure user experience.
 
 --Tech Stack
