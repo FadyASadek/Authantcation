@@ -1,24 +1,76 @@
-# Building a Secure Authentication System with Angular, ASP.NET Core API, and SQL Server
---Overview
-I’m excited to share a project I recently developed—a secure authentication system that provides seamless Sign In and Sign Up functionality. Built with a modern tech stack, this system ensures a smooth and secure user experience.
+# Secure Authentication: Angular & ASP.NET Core API
 
---Tech Stack
-Frontend: Angular – for a dynamic and responsive UI.
-Backend: ASP.NET Core API – for secure and scalable server-side logic.
-Database: SQL Server – for efficient and reliable data storage.
---Features
- Secure and seamless user authentication.
- Clean and user-friendly interface.
- Scalable architecture, designed for future enhancements.
 
---Future Enhancements
- Authorization: Implementing role-based access control (RBAC) to manage user permissions effectively.
- Dashboard: Developing an intuitive dashboard for better data visualization and user interaction.
- 
---Key Takeaways
- Strengthened my integration skills between Angular and ASP.NET Core API.
- Gained deeper insights into database operations and optimizations using SQL Server.
-Enhanced my understanding of application security best practices.
+A full-stack project demonstrating a secure user authentication system built with Angular, ASP.NET Core Web API, and SQL Server. This system provides complete Sign-Up and Sign-In functionality using modern security practices like JWT authentication.
 
-I’m excited about the progress so far and look forward to expanding the project further!
+##  Core Features
+
+* **Secure JWT Authentication:** Uses JSON Web Tokens (JWT) for securing API endpoints.
+* **Password Hashing:** All user passwords are securely hashed before being stored in the database.
+* **Responsive UI:** A clean and modern user interface built with Angular that works on all screen sizes.
+* **RESTful API:** A well-structured backend API for handling all authentication logic.
+* **Scalable Architecture:** Designed with a clean separation of concerns for future scalability.
+
+
+##  Technology Stack
+
+* **Frontend:** Angular
+* **Backend:** ASP.NET Core Web API
+* **Database:** Microsoft SQL Server
+* **API Security:** JWT (JSON Web Tokens)
+
+##  Future Enhancements
+
+* **Authorization (RBAC):** Implementing Role-Based Access Control to manage user permissions.
+* **User Dashboard:** Developing an intuitive dashboard for authenticated users.
+* **Password Recovery:** Adding a "Forgot Password" feature.
+
+
+##  Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+Make sure you have the following installed:
+* [.NET 8 SDK (or your version)](https://dotnet.microsoft.com/download)
+* [Node.js and npm](https://nodejs.org/)
+* [Angular CLI](https://angular.io/cli)
+* SQL Server
+
+### Backend Setup (ASP.NET Core API)
+
+1.  Clone the repository:
+    ```sh
+    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    ```
+2.  Navigate to the backend project folder:
+    ```sh
+    cd your-repo-name/BackendProjectFolder
+    ```
+3.  Update the database connection string in `appsettings.json`.
+4.  Apply the database migrations:
+    ```sh
+    dotnet ef database update
+    ```
+5.  Run the backend server:
+    ```sh
+    dotnet run
+    ```
+
+### Frontend Setup (Angular)
+
+1.  Navigate to the frontend project folder:
+    ```sh
+    cd your-repo-name/FrontendProjectFolder
+    ```
+2.  Install NPM packages:
+    ```sh
+    npm install
+    ```
+3.  Run the Angular development server:
+    ```sh
+    ng serve
+    ```
+4.  Open your browser and navigate to `http://localhost:4200/`.
 
